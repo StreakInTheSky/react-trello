@@ -13,14 +13,17 @@ export class ListContainer extends React.Component {
   }
 
   onAddInputChanged(event) {
-    this.state.text = event.target.value;
+    this.setState({
+      text: event.target.value
+    })
   }
 
   onAddSubmit(event) {
     event.preventDefault();
     if (this.state.text.length > 0) {
-      this.state.cards.push(this.state.text);
-      this.forceUpdate();
+      this.setState({
+        cards: [...this.state.cards, this.state.text]
+      })
     }
   }
 
