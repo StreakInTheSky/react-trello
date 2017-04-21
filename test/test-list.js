@@ -23,7 +23,7 @@ describe('List component', function() {
     const cardList = results.props.children[1];
     cardList.type.should.equal('ul');
     cardList.props.children.length.should.equal(cards.length);
-    cardList.props.children[0].props.text.should.equal(cards[0]);
+    cardList.props.children[0].props.should.include.keys('text');
   })
   // Need tests for events
 })

@@ -23,6 +23,6 @@ describe('Board component', function() {
     const listTitles = results.props.children[1];
     listTitles.type.should.equal('ul');
     listTitles.props.children.length.should.equal(lists.length);
-    listTitles.props.children[0].props.title.should.equal(lists[0]);
+    listTitles.props.children[0].props.should.include.keys('title');
   })
 })
