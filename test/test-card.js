@@ -6,7 +6,7 @@ const should = chai.should();
 
 import Card from '../js/components/card';
 
-describe('Card components', function() {
+describe('Card component', function() {
   it('Renders the card text', function() {
     const text = "Example text";
 
