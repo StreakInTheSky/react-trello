@@ -14,6 +14,7 @@ describe('List component', function() {
     const renderer = TestUtils.createRenderer();
     renderer.render(<List title={title} cards={cards} />);
     const results = renderer.getRenderOutput();
+    results.type.should.equal('li');
 
     const listTitle = results.props.children[0];
     listTitle.type.should.equal('h3');
